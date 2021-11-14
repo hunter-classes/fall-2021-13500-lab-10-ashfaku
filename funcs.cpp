@@ -70,8 +70,11 @@ bool timeOverlap(TimeSlot ts1, TimeSlot ts2)
 	Time first = ts1.startTime, second = ts2.startTime;
 	int firstDuration = ts1.movie.duration, secondDuration = ts2.movie.duration, minutes = minutesUntil(first, second);
 	std::cout << minutes << " " << firstDuration << " " << secondDuration << std::endl;
-	if (minutes > 0 && minutes < firstDuration)
-		return true;
+	if (minutes > 0)
+	{
+		if (minutes < firstDuration)
+			return true;
+	}
 	else if (abs(minutes) < secondDuration)
 		return true;
 	return false;
