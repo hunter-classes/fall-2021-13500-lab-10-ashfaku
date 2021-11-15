@@ -83,7 +83,7 @@ TEST_CASE("scheduleAfter() tests")
 	TimeSlot morning2 = {mv, {10, 30}};
 	CHECK(getTimeSlot(scheduleAfter(morning, mv)) == "Black Panther ACTION (134 min) [starts at 11:11, ends by 13:25]");
 	CHECK(getTimeSlot(scheduleAfter(morning2, m)) == "Back to the Future COMEDY (116 min) [starts at 12:44, ends by 14:40]");
-	CHECK(getTimeSlot(scheduleAfter(morning, m)) == "Back to the Future COMEDY (116 min) [starts at 11:11, ends by 13:7]");
+	CHECK(getTimeSlot(scheduleAfter(morning, m)) == "Back to the Future COMEDY (116 min) [starts at 11:11, ends by 13:07]");
 }
 TEST_CASE("Testing timeOverlap")
 {

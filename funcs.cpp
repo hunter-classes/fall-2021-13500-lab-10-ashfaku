@@ -50,7 +50,7 @@ std::string getTime(Time time)
 {
 	time.h += time.m / 60;
 	time.m %= 60;
-	return std::to_string(time.h) + ":" + std::to_string(time.m) + (time.m == 60 || time.m == 0 ? "0" : "");
+	return std::to_string(time.h) + ":" + (time.m < 10 && time.m > 0 ? "0" : "") + std::to_string(time.m) + (time.m == 60 || time.m == 0 ? "0" : "");
 }
 std::string getTimeSlot(TimeSlot t)
 {
@@ -69,7 +69,7 @@ bool timeOverlap(TimeSlot ts1, TimeSlot ts2)
 {
 	Time first = ts1.startTime, second = ts2.startTime;
 	int firstDuration = ts1.movie.duration, secondDuration = ts2.movie.duration, minutes = minutesUntil(first, second);
-	std::cout << minutes << " " << firstDuration << " " << secondDuration << std::endl;
+//	std::cout << minutes << " " << firstDuration << " " << secondDuration << std::endl;
 	if (minutes > 0)
 	{
 		if (minutes < firstDuration)
