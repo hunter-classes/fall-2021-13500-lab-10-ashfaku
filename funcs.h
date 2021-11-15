@@ -11,3 +11,4 @@ std::string getMovie(Movie m);
 std::string getTimeSlot(TimeSlot t);
 TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie);
 bool timeOverlap(TimeSlot ts1, TimeSlot ts2);
+std::string getTime(Time time);
