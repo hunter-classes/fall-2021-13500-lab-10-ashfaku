@@ -22,6 +22,7 @@ TEST_CASE("minutesUntil test cases")
 	CHECK(minutesUntil({0, 1}, {12, 0}) == 719);
 	CHECK(minutesUntil({0, 0}, {24, 0}) == 0);
 	CHECK(minutesUntil({10, 1}, {10, 60}) == 59);
+	CHECK(minutesUntil({10, 0}, {9, 0}) == -60);
 }
 TEST_CASE("addMinutes test cases")
 {
